@@ -54,11 +54,11 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 
 # 5. Configure Environment Variables
-# SECRET_KEY=your_secret_key
-# DEBUG=True
-# DB_NAME=your_database_name
-# DB_USER=your_database_user
-# DB_PASSWORD=your_database_password
+SECRET_KEY=your_secret_key
+DEBUG=True
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
 
 # 6. Apply Migrations
 python manage.py migrate
