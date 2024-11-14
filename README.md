@@ -44,24 +44,13 @@ To run this project, ensure you have:
 ## Installation and Setup
 
 **1. Navigate to the Project Directory**
-cd Learning-Management-System
 
 **2. Set Up Python Virtual Environment**
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 **4. Install Dependencies**
-pip install -r requirements.txt
 
 **5. Configure Environment Variables**
-SECRET_KEY=your_secret_key
-DEBUG=True
-DB_NAME=your_database_name
-DB_USER=your_database_user
-DB_PASSWORD=your_database_password
 
 **6. Apply Migrations**
-python manage.py migrate
 
 **7. Run the Development Server**
-python manage.py runserver
