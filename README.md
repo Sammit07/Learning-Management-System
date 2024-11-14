@@ -34,34 +34,34 @@ The Learning Management System (LMS) is a Django-based web application designed 
 
 ## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 To run this project, ensure you have:
 - **Python** 3.8 or higher
 - **Node.js** and **npm** (optional, if additional frontend packages are used)
 - **MySQL** (or your choice of relational database, if different)
 
-### Installation and Setup
+## Installation and Setup
 
-# 1. Navigate to the Project Directory
+**1. Navigate to the Project Directory**
 cd Learning-Management-System
 
-# 2. Set Up Python Virtual Environment
+**2. Set Up Python Virtual Environment**
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-# 4. Install Dependencies
+**4. Install Dependencies**
 pip install -r requirements.txt
 
-# 5. Configure Environment Variables
+**5. Configure Environment Variables**
 SECRET_KEY=your_secret_key
 DEBUG=True
 DB_NAME=your_database_name
 DB_USER=your_database_user
 DB_PASSWORD=your_database_password
 
-# 6. Apply Migrations
+**6. Apply Migrations**
 python manage.py migrate
 
-# 7. Run the Development Server
+**7. Run the Development Server**
 python manage.py runserver
