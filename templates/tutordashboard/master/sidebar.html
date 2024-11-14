@@ -1,0 +1,79 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+   <!-- Brand Logo -->
+   <a href="{% url 'tutordashboard' %}" class="brand-link text-center">
+      <span class="brand-text font-weight-light"
+         ><strong>BrightBoost</strong></span
+      >
+   </a>
+
+   <!-- Sidebar -->
+   <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex text-center">
+         <div class="info">
+            <a href="{% url 'tutordashboard' %}" class="d-block text-lg"><strong>Dashboard</strong></a>
+         </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+         <ul
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false">
+
+            <li class="nav-item">
+               <a href="{% url 'mySubject' %}" class="nav-link {% if request.path|slice:":16" == '/tutor/mysubject' %} active {% endif %}">
+                  <i class="fa fa-book mr-2" aria-hidden="true"></i>
+                  <p>
+                     My Subjects
+                  </p>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a href="{% url 'tutorSession' %}" class="nav-link {% if request.path|slice:":18" == '/tutor/session' %} active {% endif %}">
+                  <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
+                  <p>
+                     Timetable
+                  </p>
+               </a>
+            </li>
+            {% comment %} <li class="nav-item">
+               <a href="{% url 'tutorQuestion' %}" class="nav-link {% if request.path|slice:":15" == '/tutor/question' %} active {% endif %}">
+                  <i class="fa fa-question-circle mr-2" aria-hidden="true"></i>
+                  <p>
+                     
+                  </p>
+               </a>
+            </li> {% endcomment %}
+            <li class="nav-item {% if request.path|slice:":15" == '/tutor/question' %} menu-open {% endif %}">
+               <a href="#" class="nav-link {% if request.path|slice:":15" == '/tutor/question' %} active {% endif %}">
+                  <i class="fa fa-question-circle mr-2" aria-hidden="true"></i>
+                  <p>
+                     Questions
+                     <i class="right fas fa-angle-left"></i>
+                  </p>
+               </a>
+               <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                     <a href="{% url 'tutorQuestion' %}" class="nav-link {% if request.path|slice:":28" == '/tutor/question/allquestions' %} active {% endif %}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>All Questions</p>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="{% url 'myQuestions' %}" class="nav-link {% if request.path|slice:":27" == '/tutor/question/myquestions' %} active {% endif %}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>My Questions</p>
+                     </a>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+   </div>
+   <!-- /.sidebar -->
+</aside>
